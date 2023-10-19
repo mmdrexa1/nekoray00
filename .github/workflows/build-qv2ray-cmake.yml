@@ -22,7 +22,7 @@ jobs:
           - cross_os: public_res
             cross_arch: public_res
       fail-fast: false
-    runs-on: ubuntu-latest
+    runs-on: Self-hosted
     steps:
       - name: Checking out sources
         uses: actions/checkout@v3
@@ -148,7 +148,7 @@ jobs:
   publish:
     name: Pack & Publish Release
     if: github.event.inputs.artifact-pack != 'y'
-    runs-on: ubuntu-latest
+    runs-on: Self-hosted
     needs:
       - build-cpp
       - build-go
